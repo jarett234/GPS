@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fa_qrcode">&#xf029;</string>
+    <string name="fa_play_circle">&#xf144;</string>
+    <string name="fa_stop_circle">&#xf28d;</string>
+    <string name="fa_save">&#xf0c7;</string>
+</resources>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/top_gradient"
+        android:orientation="vertical"
+        android:layout_weight="0.6">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_weight="0.2"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:src="@drawable/vectoredlogohat"
+            />
+
+        <TextView
+            android:id="@+id/txt_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:text="Not Started"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="42dp"
+            android:layout_marginTop="20dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_gradient"
+        android:orientation="vertical"
+        android:layout_weight="0.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+
+            <Button
+                android:id="@+id/btn_qr_code"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/fontawesomesolid"
+                android:text="@string/fa_qrcode"
+                android:textColor="#ffffff"
+                android:textSize="42dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_start_tracking"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/round_button"
+                android:enabled="false"
+                android:fontFamily="@font/fontawesome"
+                android:text="@string/fa_play_circle"
+                android:textColor="#ffffff"
+                android:textSize="42dp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_stop_tracking"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/round_button"
+                android:enabled="false"
+                android:fontFamily="@font/fontawesome"
+                android:text="@string/fa_stop_circle"
+                android:textColor="#ffffff"
+                android:textSize="42dp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/txt_qr_code_btn_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_qr_code"
+                android:text="Scan\nQR Code"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="#005fbb"/>
+
+            <View
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"/>
+
+            <TextView
+                android:id="@+id/txt_start_tracking_btn_label"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_start_tracking"
+                android:layout_gravity="center_horizontal"
+                android:text="Start\nTracking"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="#005fbb"/>
+
+
+            <TextView
+                android:id="@+id/txt_stop_tracking_btn_label"
+                android:visibility="gone"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_stop_tracking"
+                android:layout_gravity="center_horizontal"
+                android:text="Stop\nTracking"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="#005fbb"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/urlTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="8dp"
+            android:ems="11"
+            android:textSize="0dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/deviceIdInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="8dp"
+            android:ems="11"
+            android:textSize="0dp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+    <!--<Button
+        android:id="@+id/btn_start_tracking"
+        android:layout_width="350dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:text="Start tracking"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_stop_tracking"
+        android:layout_width="350dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:text="Stop tracking"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn-qr-code"
+        android:layout_width="400dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#4CAF50"
+        android:baselineAligned="false"
+        android:text="QR Code"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn-save-settings"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="20dp"
+        android:background="#4CAF50"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txt_status2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Connection String"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/urlTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:password="true"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txt_status3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Device Id"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/deviceIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:visibility="invisible" />-->
+
+</LinearLayout>
